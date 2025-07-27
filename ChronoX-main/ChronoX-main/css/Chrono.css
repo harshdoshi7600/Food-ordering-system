@@ -1,0 +1,424 @@
+/* General Styling */
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar-brand {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 2rem;
+  margin-left: 20px;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.navbar-brand:hover,.navbar-brand:active{
+  color: #ffffff;
+}
+
+/* Video Background */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Keeps it behind the content */
+}
+
+/* Navbar Adjustments */
+.navbar {
+  background: black!important;
+  opacity: 0.6;
+  padding: 15px 0;
+ 
+  
+}
+.navbar-brand {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 2rem;
+  margin-left: 20px;
+}
+.nav-link {
+  color: white !important;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  color: #ffd700 !important;
+  transform: translateY(-2px);
+}
+.navbar i {
+  color: white !important;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.navbar i:hover {
+  color: #ffd700 !important;
+  transform: scale(1.1);
+}
+.navbar .container-fluid {
+  padding: 0 30px;
+}
+.navbar-toggler {
+  border-color: white;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* Hero Carousel */
+.carousel-item img {
+  height: 80vh; /* Fullscreen height */
+  object-fit: cover;
+  width: 100%;
+}
+
+
+.carousel-caption h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+/* Custom position for the carousel caption */
+.custom-caption {
+  position: absolute;
+  top: 60%; /* Middle of the image */
+  left: 17%; /* Adjust distance from the left */
+  transform: translateY(-50%); /* Vertically center the content */
+  text-align: left; /* Align text to the left */ /* Optional: Adds a semi-transparent background */
+  padding: 20px; /* Optional: Adds padding around the text */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.custom-caption h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white; /* Text color */
+}
+
+.custom-caption p {
+  font-size: 1.2rem;
+  color: white; /* Text color */
+}
+
+.custom-caption a {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.custom-caption a:hover {
+  background-color: #0056b3;
+}
+
+/* Rounded Carousel Indicators */
+.carousel-indicators .rounded-indicator {
+  width: 9px;
+  height: 9px;
+  background-color: #fff; /* White dots */
+  border-radius: 50%; /* Rounded shape */
+  margin: 0 5px;
+  border: 2px solid transparent; /* Optional: Adds a clean border */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 0 7px;
+}
+
+.carousel-indicators .rounded-indicator.active {
+  background-color: #ffc107; /* Yellow for active indicator */
+  transform: scale(1.1); /* Slightly larger for the active state */
+  border-color: #ffc107; /* Optional: Match the active color */
+}
+
+/* Hide Previous and Next Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  display: none; /* Completely hides the controls */
+}
+
+/* Video Section Fix (First Video) */
+
+.watchvideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the screen */
+  z-index: -1; /* Puts the video behind the content */
+}
+
+/* Second Video Fix */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  background: #000; /* Black background for fallback */
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fill the container perfectly without distortion */
+}
+
+/* Remove gaps between the sections */
+.container-fluid {
+  margin-top: 0;
+}
+
+.row.gx-0 {
+  margin-top: 0; /* Ensure the row touches the carousel */
+}
+
+/* Category Card */
+.category-card {
+  position: relative;
+  overflow: hidden;
+  height: 100%; /* Ensure the card spans the full height */
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits perfectly without distortion */
+}
+
+.category-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text */
+  padding: 20px;
+  border-radius: 10px;
+}
+/* Shop Section Common Styling */
+.shop-section {
+  padding: 60px 0;
+}
+
+.shop-section h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.shop-section img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shop-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Gap Styling */
+.row.g-3 [class*="col-"] {
+  padding: 0 5px; /* Small gap between images */
+}
+
+.row.g-3 {
+  margin: 0 -5px; /* Removes the outer margins */
+}
+
+
+.category-content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+}
+
+.category-content p {
+  margin: 5px 0;
+  color: #fff;
+}
+
+.category-content .btn {
+  margin-top: 10px;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.category-content .btn:hover {
+  background-color: #ffc107;
+  color: black;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: border 0.4s ease; /* Smooth border transition */ /* Start with a transparent border */
+}
+
+.category-card img:hover {
+  border: 2px solid #ffc107; /* Yellow border on hover */
+}
+
+/* Product Section */
+.container {
+  padding-top: 80px; /* Space below fixed navbar */
+}
+
+.dev {
+  display: flex;
+  gap: 40px;
+}
+
+.card {
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-top: 40px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 400px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+
+
+.card-title {
+  font-weight: bold;
+}
+
+/* Watch Information Section */
+.watch-info-section {
+  padding: 60px 0;
+  background-color: #000000;
+}
+
+.watch-info-section .text-content {
+  color: #333;
+}
+
+.watch-info-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.watch-info-section .highlight {
+  color: #007bff; /* Highlight color */
+}
+
+.watch-info-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.watch-info-section .btn-primary {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+/* Cashback Section */
+.cashback-section img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 60px;
+  margin-left: 170px;
+  color: #f8f9fa;
+}
+
+/* Product Categories Section */
+.product-categories-section {
+  background-color: #000; 
+  margin-top: 100px;/* Light background */
+  padding: 60px 0;
+}
+
+.product-categories-section h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.category-item {
+  text-align: center;
+  width: 120px;
+  margin: 10px; /* Space between items */
+}
+
+.category-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border: 1px solid grey;
+}
+
+.category-item img:hover {
+  transform: scale(1.1); /* Zoom effect */
+  border: 2px solid #ffc107; /* Yellow border on hover */
+}
+
+.category-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fffdfd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .watch-info-section {
+    padding: 40px 20px;
+  }
+
+  .watch-info-section h2 {
+    font-size: 2rem;
+  }
+
+  .watch-info-section p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-caption h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .video-section,
+  .video-wrapper {
+    height: 300px; /* Adjust video height for smaller screens */
+  }
+}
